@@ -22,9 +22,10 @@ public class Methoden {
         return newList;
     }
 
-    public void sortByRabattPreis(List<Produkt> liste){
+    public List<Produkt> sortByRabattPreis(List<Produkt> liste){
         List<Produkt> rabattList = preisNachRabatt(liste);
         rabattList.sort(Comparator.comparing(Produkt::getPreis));
+        return rabattList;
     }
 
     public Produkt teursteProdukt(List<Produkt> liste){

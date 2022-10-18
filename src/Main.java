@@ -26,10 +26,14 @@ public class Main {
 
             System.out.println(p.getPreis());
         }
+        List<Produkt> sortierteList = M.sortByRabattPreis(produktList);
+        System.out.println("Liste sortiert :");
+        for(Produkt p : sortierteList) {
+            System.out.println(p.getPreis());
+        }
         List<Produkt> teuereProdukte = M.preisGrosserAls100(produktList);
         System.out.println("Produke mit Preiser grosser als 100");
         for(Produkt p : teuereProdukte){
-
             System.out.println(p.getPreis());}
         Produkt teuerste = M.teursteProdukt(produktList);
             System.out.println("Teurster Produkt: ");
